@@ -9,8 +9,16 @@ export const purpleTheme = createTheme({
         secondary: {
             main: '#543884'
         },
+        matchone: {
+            main: '#00C89B'
+        },
+        matchtwo: {
+            main: '#00B492'
+        },
         error: {
             main: red.A400
         }
     },
 })
+
+
