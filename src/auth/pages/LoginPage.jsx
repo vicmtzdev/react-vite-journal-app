@@ -40,7 +40,7 @@ export const LoginPage = () => {
       {/* Container general */}
       <AuthLayout title="Login" >
 
-        <form onSubmit={onSubmit} >
+        <form onSubmit={onSubmit} className='animate__animated animate__fadeIn animate__faster' >
             {/* Container inputs */}
             <Grid container>
 
@@ -49,7 +49,7 @@ export const LoginPage = () => {
               </Grid>
 
               <Grid item xs={12} sx={{mt: 2}}>
-              <TextField label="Contraseña" type="password" placeholder="Password" fullWidth name='password' onChange={onInputChange} value={password} />
+              <TextField label="Contraseña" type="password" placeholder="password" fullWidth name='password' onChange={onInputChange} value={password} />
               </Grid>
 
             <Grid container >

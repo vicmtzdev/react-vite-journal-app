@@ -15,6 +15,9 @@ export const purpleTheme = createTheme({
         matchtwo: {
             main: '#00B492'
         },
+        chill: {
+            main: '#FAFAFA'
+        },
         error: {
             main: red.A400
         }
