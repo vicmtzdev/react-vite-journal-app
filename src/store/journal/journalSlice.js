@@ -47,14 +47,25 @@ export const journalSlice = createSlice({
 
         },
         deleteNoteById: (state, action) => {
-
+            state.active = null;
+            state.notes = state.notes.filter(note => note.id !== action.payload);
         },
         savingNewNote: (state) => {
             state.isSaving = true;
+        },
+        setPhotosToActiveNote: (state, action) => {
+            state.active.imageUrls = [...state.active.imageUrls, ...action.payload];
+            state.isSaving = false;
+        },
+        clearNotesLogout: (state) => {
+            state.isSaving = false;
+            state.messageSaved = '';
+            state.notes = [];
+            state.active = null;
         },
     }
 });
 
 
 // Action creators are generated for each case reducer function
-export const { addNewEmptyNote, setActiveNote, setNotes, setSaving, updateNote, deleteNoteById, savingNewNote } = journalSlice.actions;
+export const { addNewEmptyNote, setActiveNote, setNotes, setSaving, updateNote, deleteNoteById, savingNewNote, setPhotosToActiveNote, clearNotesLogout } = journalSlice.actions;
